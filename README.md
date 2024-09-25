@@ -4,4 +4,4 @@
 git clone --branch kevin https://github.com/RicardoAcostaArambula/computer_security/
 
 ### Following that run the startup script with command:
-./setup_machine
+./setup_machine.py
