@@ -1,11 +1,8 @@
-import os
-
+from pathlib import Path
+#Script that creates a file with the root password under home directory
 rootPassword = "toor"
-homeDirectory = os.path.expanduser("~")
-desktopPath = os.paht.join(homeDirectory, "Desktop")
+homePath = Path.home()
 fileName = "my_password"
-filePath = os.path.join(desktopPath, fileName)
-with open(filePath, "w") as file:
-    file.write(f"root password: {rootPassword}")
-
+filePath = homePath / fileName
+filePath.write_text(f"root password: {rootPassword}\n")
 print(f"File created at {filePath} with the root password")
