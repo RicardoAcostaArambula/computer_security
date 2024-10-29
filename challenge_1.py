@@ -3,7 +3,7 @@ import stat
 
 challengeDirectory = "/root/challenge"
 subDirectories = ["dir1", "dir2", "dir3", "dir4"]
-key = "the secret key is: c0mpu73r 23cur17y"
+key = "the key is: 17"
 fileWithKey = "dir5"
 hintMessage ="The key is in one of the files, but not here..."
 def setupChallenge():
