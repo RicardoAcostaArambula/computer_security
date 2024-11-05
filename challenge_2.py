@@ -1,3 +1,4 @@
+import os
 def caesar_cipher_encrypt(text, shift):
     result = ""
     for char in text:
@@ -24,6 +25,11 @@ if __name__ == "__main__":
     encrypted_message = caesar_cipher_encrypt(original_message, shift_key)
     print("Encrypted message:", encrypted_message)
 
+    directory = "/home/acostaricardo463/challenges"
+    file_path = os.path.join(directory, "encrypted_message.txt")
+
+    with open(file_path, "w") as file:
+        file.write(encrypted_message)
     # Decrypt the message to verify
     decrypted_message = caesar_cipher_decrypt(encrypted_message, shift_key)
     print("Decrypted message:", decrypted_message)
