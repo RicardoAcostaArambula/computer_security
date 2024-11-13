@@ -33,6 +33,10 @@ if __name__ == "__main__":
         file.write(encrypted_message)
     # Decrypt the message to verify
     decrypted_message = caesar_cipher_decrypt(encrypted_message, shift_key)
+<<<<<<< HEAD
     # print("Decrypted message:", decrypted_message)
 
 
+=======
+    print("Decrypted message:", decrypted_messag
+>>>>>>> ce2167b (comments)
