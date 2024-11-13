@@ -1,0 +1,11 @@
+If you have no clue where to start, checkout the "Ricardo" Directory and try to gain root access
+
+From there you should traverse through each directory with some sort of key 
+
+Eventually you will complete the final flag and recieve a congratulations message on terminal like the following:
+
+Y   Y  III  PPPP  III  EEEEE EEEEE  !!!
+ Y Y    I   P  P   I   E     E      !!!
+  Y     I   PPP    I   EEEE  EEEE   !!!
+  Y     I   P      I   E     E      !!!
+  Y    III  P     III  EEEEE EEEEE   .
