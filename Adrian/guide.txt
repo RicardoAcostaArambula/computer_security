@@ -5,6 +5,6 @@ Hello, provided below are basic steps to get started if you are lost:
       - The size of the buffer
       - The hex address of the buffer
       - The hex address of the EBP
-3. After acquiring each of the data points requested, input them where prompted by the calc.py file. If you input the correct data, a success message will be output by the system. If not, the program will terminate.
+3. After acquiring each of the data points requested, input them where prompted by the calc.c file. If you input the correct data, a success message will be output by the system. If not, the program will terminate.
 
 
