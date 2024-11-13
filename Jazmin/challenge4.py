@@ -1,0 +1,65 @@
+import socket
+import threading
+
+CORRECT_IP = 0
+CORRECT_PORT = 1
+
+def handle_user(conn, address):
+    print(f"Connection from {address}")
+
+    encrypted_message = "baaab aabbb abbab babaa ababb aabaa baaba aabbb aabaa abbba aaaaa baaab baaab babaa abbab baaaa aaabb"
+    print(f"The following message has to be decoded to proceed: {encrypted_message}.encode('utf-8')")
+    print("Hint: Try decoding with bacon ;)".encode('utf-8'))
+    print("Use the decoded message in the following command: 'echo <message> | nc <IP> <port>'")
+    print("Waiting.....")
+
+    decoded_message = "SHOWMETHEPASSWORD"
+
+    try:
+        #Get user's response
+        response = conn.recv(1024).decode('utf-8').strip()
+        if response == f"echo {decoded_message} | nc {CORRECT_IP} {CORRECT_PORT}":
+            conn.sendall(f"You did it! Here is your next key: '8uff3r_0v3rfl0w'".encode('utf-8'))
+        else:
+            conn.sendall("Incorrect, keep trying.....".encode('utf-8'))
+    except Exception as e:
+        print(f"Error handling user {address}: {e}")
+    #Close connection
+    conn.sendall(b"You solved the challenge! You can disconnect now.\n")
+    conn.close()
+
+def start_server():
+    #set up server
+    print(f"Welcome to Challenge 4! In this challenge you will connect to netcat using the IP address and port number obtained from the previous challenges.")
+    print(f"To continue use the following command: 'nc <IP> <port>'")
+    
+    while True:
+        #Waiting for user input to connect
+        user_connect = input().strip()
+        #Validate user's input
+        if user_connect == f"nc {CORRECT_IP} {CORRECT_PORT}":
+            print("Starting the server...")
+            break
+        else:
+            print("Incorrect command :( . Please try again.")
+    
+    #set up server socket
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:  
+        server.bind((CORRECT_IP, CORRECT_PORT))
+        server.listen(5)
+    
+        print(f"Server started. Listening on {CORRECT_IP}:{CORRECT_PORT}")
+
+        while True:
+            conn, address = server.accept()
+            #start new thread for each user that connects
+            user_thread = threading.Thread(target = handle_user, args = (conn, address))
+            user_thread.start()
+    
+    except Exception as e:
+        print(f"Error: {e}")
+        server.close()
+
+#Start the server with IP and Port
+start_server()
