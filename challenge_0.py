@@ -1,4 +1,5 @@
 from pathlib import Path
+# This script must be run inside ther user not root
 #Script that creates a file with the root password under home directory
 rootPassword = "toor"
 homePath = Path.home()

@@ -19,7 +19,8 @@ def caesar_cipher_decrypt(text, shift):
 
 if __name__ == "__main__":
     original_message = "192.168.1.10 and 192.168.1.20"
-    shift_key = 5  # Key for Caesar cipher shift
+    # Key for Caesar cipher shift
+    shift_key = 5  
 
     # Encrypt the message
     encrypted_message = caesar_cipher_encrypt(original_message, shift_key)
