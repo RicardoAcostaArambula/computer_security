@@ -1,0 +1,8 @@
+For this challenge, users will:
+
+Connect to the server using the IP address obtained from Challenge 2 and the port number retrieved from Challenge 3. 
+Upon connecting, receive an encrypted message.
+Decrypt the received message.
+Format their response based on the decrypted message.
+Send the correctly formatted response back to the server using Netcat.
+Await key from the server to proceed to the next challenge and end connection.
