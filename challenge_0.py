@@ -6,4 +6,4 @@ homePath = Path.home()
 fileName = "my_password"
 filePath = homePath / fileName
 filePath.write_text(f"root password: {rootPassword}\n")
-print(f"
+print(f"File created at {filePath} with the root password")

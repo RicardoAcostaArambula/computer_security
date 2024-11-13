@@ -34,9 +34,15 @@ if __name__ == "__main__":
     # Decrypt the message to verify
     decrypted_message = caesar_cipher_decrypt(encrypted_message, shift_key)
 <<<<<<< HEAD
+<<<<<<< HEAD
     # print("Decrypted message:", decrypted_message)
 
 
 =======
     print("Decrypted message:", decrypted_messag
 >>>>>>> ce2167b (comments)
+=======
+    print("Decrypted message:", decrypted_message)
+
+
+>>>>>>> b2760d6 (comments)
