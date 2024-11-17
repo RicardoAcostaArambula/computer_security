@@ -19,8 +19,7 @@ def caesar_cipher_decrypt(text, shift):
 
 if __name__ == "__main__":
     original_message = "192.168.1.10 and 192.168.1.20"
-    # Key for Caesar cipher shift
-    shift_key = 5  
+    shift_key = 5  # Key for Caesar cipher shift
 
     # Encrypt the message
     encrypted_message = caesar_cipher_encrypt(original_message, shift_key)
@@ -33,6 +32,6 @@ if __name__ == "__main__":
         file.write(encrypted_message)
     # Decrypt the message to verify
     decrypted_message = caesar_cipher_decrypt(encrypted_message, shift_key)
-    print("Decrypted message:", decrypted_message)
+    # print("Decrypted message:", decrypted_message)
 
 
