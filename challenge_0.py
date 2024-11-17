@@ -1,6 +1,6 @@
 from pathlib import Path
 #Script that creates a file with the root password under home directory
-rootPassword = "toor"
+rootPassword = "dees"
 homePath = Path.home()
 fileName = "my_password"
 filePath = homePath / fileName
