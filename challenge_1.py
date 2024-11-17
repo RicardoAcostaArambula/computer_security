@@ -1,6 +1,6 @@
 import os
 import stat
-#file path may change based on each user
+
 challengeDirectory = "/home/acostaricardo463/challenges"
 subDirectories = ["dir1", "dir2", "dir3", "dir4", "dir5"]
 key = "the key is: 17"
@@ -14,6 +14,7 @@ def setupChallenge():
         os.makedirs(subdirectory, exist_ok=True)
         #creating files
         for i in range(1, 5):
+
             fileName = os.path.join(subdirectory, f"file{i}.txt")
             with open(fileName, "w") as file:
                 file.write(hintMessage)
