@@ -8,9 +8,9 @@ def handle_user(conn, address):
     print(f"Connection from {address}")
 
     encrypted_message = "baaab aabbb abbab babaa ababb aabaa baaba aabbb aabaa abbba aaaaa baaab baaab babaa abbab baaaa aaabb"
-    print(f"The following message has to be decoded to proceed: {encrypted_message}")
-    print("Hint: Try decoding with bacon :)")
-    print("Use the decoded message in the following command: 'echo <decoded_message> | nc <IP> <port>'")
+    print(f"The following message has to be decoded to proceed: {encrypted_message}.encode('utf-8')")
+    print("Hint: Try decoding with Bacon cipher.\n".encode('utf-8'))
+    print("Use the decoded message in the following command: 'echo <decoded_message> | nc <IP> <port>'".encode('utf-8'))
     print("Waiting.....")
 
     decoded_message = "SHOWMETHEPASSWORD"
@@ -29,7 +29,7 @@ def handle_user(conn, address):
             break
 
     #Close connection
-    conn.sendall(b"You solved the challenge! You can disconnect now.\n")
+    conn.sendall(b"You solved the challenge! You will be disconnected now.\n")
     conn.close()
 
 def start_server():
