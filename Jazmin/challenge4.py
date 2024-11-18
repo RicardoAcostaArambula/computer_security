@@ -8,7 +8,7 @@ def handle_user(conn, address):
     print(f"Connection from {address}")
 
     encrypted_message = "baaab aabbb abbab babaa ababb aabaa baaba aabbb aabaa abbba aaaaa baaab baaab babaa abbab baaaa aaabb"
-    conn.sendall(f"The following message has to be decoded to proceed: {encrypted_message}.encode('utf-8')")
+    conn.sendall(f"The following message has to be decoded to proceed: {encrypted_message}\n".encode('utf-8'))
     conn.sendall("Hint: Try decoding with Bacon cipher.\n".encode('utf-8'))
     conn.sendall("Use the decoded message in the following command: 'echo <decoded_message> | nc <IP> <port>'".encode('utf-8'))
     conn.sendall("Waiting.....\n".encode('utf-8'))
