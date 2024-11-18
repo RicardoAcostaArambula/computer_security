@@ -1,10 +1,10 @@
 Hello, provided below are basic steps to get started if you are lost:
 
-1. Using the password acquired at the end of the previous challenge, unlock access to the files for this challenge.
-2. In order to prepare for your buffer overflow attack you will need to acquire specific information hidden within the files for this challenge. Using Ghidra to see the contents of each file, you will be seeking the following (the data will be labeled somewhere in the file and hints will be provided by the output of each file):
+1. Using the password acquired at the end of the previous challenge, unlock access to the files for challenge 5.
+2. In order to prepare for your buffer overflow attack you will need to acquire specific information hidden within the files for this challenge: C5_1, C5_2, C5_3. Using Ghidra to see the contents of each file, you will be seeking the following (the data will be labeled somewhere in the file and hints will be provided by the output of each file):
       - The size of the buffer
       - The hex address of the buffer
       - The hex address of the EBP
-3. After acquiring each of the data points requested, input them where prompted by the calc.c file. If you input the correct data, a success message will be output by the system. If not, the program will terminate.
+3. After acquiring each of the data points requested, input them where prompted by the challenge5.c file. If you input the correct data, a success message will be output by the system and you will be given the calculated offset. If not, the program will terminate.
 
 
