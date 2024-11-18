@@ -8,10 +8,10 @@ def handle_user(conn, address):
     print(f"Connection from {address}")
 
     encrypted_message = "baaab aabbb abbab babaa ababb aabaa baaba aabbb aabaa abbba aaaaa baaab baaab babaa abbab baaaa aaabb"
-    print(f"The following message has to be decoded to proceed: {encrypted_message}.encode('utf-8')")
-    print("Hint: Try decoding with Bacon cipher.\n".encode('utf-8'))
-    print("Use the decoded message in the following command: 'echo <decoded_message> | nc <IP> <port>'".encode('utf-8'))
-    print("Waiting.....")
+    conn.sendall(f"The following message has to be decoded to proceed: {encrypted_message}.encode('utf-8')")
+    conn.sendall("Hint: Try decoding with Bacon cipher.\n".encode('utf-8'))
+    conn.sendall("Use the decoded message in the following command: 'echo <decoded_message> | nc <IP> <port>'".encode('utf-8'))
+    conn.sendall("Waiting.....\n".encode('utf-8'))
 
     decoded_message = "SHOWMETHEPASSWORD"
 
@@ -57,7 +57,6 @@ def start_server():
 
         while True:
             conn, address = server.accept()
-            print("Accepted connection.")
             #start new thread for each user that connects
             user_thread = threading.Thread(target = handle_user, args = (conn, address))
             user_thread.start()
