@@ -1,8 +1,8 @@
 import socket
 import threading
 
-CORRECT_IP = '192.168.1.20' 
-CORRECT_PORT = 53379 
+CORRECT_IP = '192.168.178.5' 
+CORRECT_PORT = 59999
 
 def handle_user(conn, address):
     print(f"Connection from {address}")
