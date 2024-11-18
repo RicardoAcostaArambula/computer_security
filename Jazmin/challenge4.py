@@ -57,6 +57,7 @@ def start_server():
 
         while True:
             conn, address = server.accept()
+            print("Accepted connection.")
             #start new thread for each user that connects
             user_thread = threading.Thread(target = handle_user, args = (conn, address))
             user_thread.start()
