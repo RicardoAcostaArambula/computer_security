@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<script>
+	function createUser(){
+		alert("Your username has been documented");
+		// Do more stuff
+		window.location.href="tools.html";
+	}
+</script>
+<style>
+.main-container {
+    flex: auto;
+}
+</style>
+<html lang="en">
+        <head>
+                <title>Sign up</title>
+        </head>
+        <body>
+                <div class="main-container">
+                        <h1>Please give yourself a username</h1>
+			<form id="signUpForm">
+			<input type="text" id="username" placehoder="Enter your username">
+			 <button onClick="createUser()">Create</button>
+			</form>
+		</div>
+        </body>
+</html>
+
