@@ -17,6 +17,7 @@ Finally, to execute type on terminal
 sudo python3 startup.py
 '''
 import os
+import subprocess
 
 def apt_upgrade():
     os.system('sudo apt update')
@@ -47,7 +48,7 @@ def start_logger():
 def main():
     #apt_upgrade()
     install_ghidra()
-    start_logger()
+    #start_logger()
 
 if __name__ == '__main__':
     main()
