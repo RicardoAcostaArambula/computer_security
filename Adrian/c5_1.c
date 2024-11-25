@@ -17,9 +17,9 @@ void Smeagol(){
 }
 void Sauron(){
     printf("0th3r w4y...");
-    char ring3[] = "Three rings for the elves under the sky..."
-    char ring7[] = "Seven for the dwarf lords in their halls of stone..."
-    char ring9[] = "Nine for mortal men doomed to die..."
+    char ring3[] = "Three rings for the elves under the sky...";
+    char ring7[] = "Seven for the dwarf lords in their halls of stone...";
+    char ring9[] = "Nine for mortal men doomed to die...";
 }
 
 int main(){
