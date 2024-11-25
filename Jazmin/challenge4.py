@@ -63,5 +63,5 @@ def start_server():
         sys.exit(0)
 
 #Start the server with IP and port
-start_server
+start_server()
 sys.exit(0)
