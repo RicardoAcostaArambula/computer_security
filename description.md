@@ -11,3 +11,11 @@ Challenge 1 consists of finding a caesar cipher key that you will use to decrypt
 ### Challenge 2: 
 Well done! You made it to challenge 2! Now that you have the key, you need to find the encrypted message stored somewhere. Once you find the message, use the key from the previous challenge to decrypt the secret message. Numbers are encrypted as well. 
 
+### Challenge 3:
+For this challenge, users will:
+1. Use the first (1st) IP address provided by the output of Task 2
+2. Use Wireshark to find the network packets associated with said IP address 
+3. Find the key somewhere in the .pcap file
+4. Decode the broken up data blocks, using a substition cipher with the key
+5. Combine the data blocks into a cohesive message
+6. Use the message in the following Task, 4
