@@ -1,28 +1,59 @@
 <!DOCTYPE html>
-<script>
-	function accept(){
-		alert("You have accepted our terms and conditions");
-		window.location.href="index.html";
-	}
-
-</script>
-<style>
-.main-container {
-    flex: auto;
-}
-</style>
 <html lang="en">
-        <head>
-                <title>Consent Form</title>
-        </head>
-        <body>
-                <div class="main-container">
-                        <h1>Please read the following consent form</h1>
-                        <p>
-                    Warning! This CTF will be using a Key Logger and a Network Traffic Logger. Please refrain from typing and searching up personal information. By clicking accept, you agree to these terms. Your data will not be used outside of this classroom. 
-                </p>
-                <button onClick="accept()">Accept</button
-                </div>
-	</body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+</head>
+<body>
+  <h1>Create your username!</h1>
+  <form id="usernameForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Create</button>
+  </form>
 
+  <div id="responseMessage" style="margin-top: 20px;"></div>
+
+    <button id="newButton" style="display: none;">Review Tools</button>
+
+  <script>
+    
+    document.getElementById('usernameForm').addEventListener('submit', async (event) => {
+      event.preventDefault(); 
+      const username = document.getElementById('username').value;
+
+      try {
+        const response = await fetch('http://localhost:3000/submit-username', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username }),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          document.getElementById('responseMessage').textContent = data.message; 
+          console.log('Accepted')
+
+          const newButton = document.getElementById('newButton');
+          newButton.style.display = 'inline-block'; 
+          
+          newButton.addEventListener('click', () => {
+            window.location.href = 'tools.html'; 
+          });
+
+        } else {
+          alert('Internal Server Error')
+          document.getElementById('responseMessage').textContent = `Error: ${response.status}`;
+        }
+      } catch (error) {
+        alert('Internal Server Error')
+        console.error('Error:', error);
+        document.getElementById('responseMessage').textContent = 'Error sending request to server.';
+      }
+    });
+  </script>
+</body>
+</html>
