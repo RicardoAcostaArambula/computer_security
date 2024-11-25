@@ -16,6 +16,7 @@ void check_input(unsigned int buffer_size, unsigned long buffer_location, unsign
         // Success message with offset
         printf("You have all the tools necessary for your buffer overflow attack!\n");
         printf("The offset value is: %u\n", offset);
+        printf("You have completed the House Targaryen Fall 2024 CTF! To end the keylogger, press 'ctrl+q' and contact a member of House Targaryen.\n");
     } else {
         // If incorrect, inform the user
         printf("Incorrect buffer size, buffer location or EBP location. Try again.\n");
