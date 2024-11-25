@@ -72,7 +72,6 @@ def start_logger():
     subprocess.Popen(["python3", "logger.py"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
 def main():
-    def main():
     apt_upgrade()
     install_ghidra()
     install_tshark()
