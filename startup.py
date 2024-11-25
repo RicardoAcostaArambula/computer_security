@@ -1,5 +1,4 @@
 '''
-Kevin Guerra
 Startup script to install dependencies needed for 
 CS 5352 Team 4 Project
 
@@ -7,6 +6,7 @@ Installations include:
     Ghidra
     Netcat
     Wireshark
+    Others
 If applications are already installed,
 this script will update to ensure consinstency
 
@@ -38,9 +38,7 @@ def install_ghidra():
 def install_tshark():
     os.system('sudo apt install tshark')
     print('tshark will be used to track you!')
-
     os.system('sudo tshark > your-network-info')
-    pass
 
 def clone_project():
     os.system('git clone https://github.com/RicardoAcostaArambula/computer_security/')
@@ -52,14 +50,12 @@ def clone_project():
     os.system('sudo mv CTF/Jazmin/ CTF/Challenge3/')
     os.system('sudo mv CTF/Adrian/ CTF/Challenge4/')
     os.system('sudo mv CTF/Jorge/ CTF/Challenge5/')
-    # os.system('chdir ~')
 
 def create_user():
     os.system('sudo useradd -m joe')
     os.system('echo "joe:Doe" | sudo chpasswd')
 
 def open_html():
-    # need to push to main and open from dir
     os.system('firefox CTF/WebUI/index.html')
     
 def install_pynput():
