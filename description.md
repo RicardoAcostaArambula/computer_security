@@ -1,4 +1,4 @@
-# Welcome to {CTF name}
+# Welcome!!!
 ## Overview:
 In this challenge you will have an opportunity to {} through a series of challenges that build on top of each other. Which means, you need to complete challenge 0 before challenge 1, challenge 1 before challenge 2 until the final challenge. The use of the terminal is highly encouraged. 
 
